@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Yuruka_UB";
+  src: url('../fonts/FOT-YurukaStd-UB.otf') format('OpenType'),
+}
+
+@font-face {
+  font-family: "Lilita_One";
+  src: url('../fonts/LilitaOne-Regular.ttf') format('TrueType'),
+}
+
+.background-container {
+  background-image: url("../images/GFaA4w9acAAm0ZV.jpeg");
+  width: 100%;
+  height: 800px;
+  position: relative;  /* Needed for containing positioned elements */
+}
+
+.image-container {
+  overflow: visible;
+  background-image: url("../images/stars.png");
+  width: 100%;
+  height: 300px;
+  position: relative;  /* Needed for containing positioned elements */
+}
+
+.image-container::after {
+  overflow: visible;
+  content: "";  /* Empty content for the pseudo-element */
+  background-image: url("../images/Pocket_I.C.B.M..png");  /* Set foreground image */
+  position: absolute;  /* Position on top of the container */
+  top: 100px;  /* Adjust vertical position */
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);  /* Center the element precisely */
+  z-index: 1;  /* Set a higher z-index to be on top */
+  width: 128px;
+  height: 128px;
+}
+
+body {
+  background-color: #f0f0f0;  /* Light gray background */
+  font-family: sans-serif;  /* Fallback font */
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;  
+  margin-bottom: 10px;  /* Add space below the heading */
+}
+
+p {
+  font-size: 1em;  /* Slightly larger font size for paragraphs */
+  line-height: 1.5;  /* Increase line spacing for better readability */
+}
+
+.navigation {
+  list-style: none;  /* Remove default bullet points */
+  padding: 0;  /* Remove default padding */
+  margin: 0;  /* Remove default margin */
+}
+
+.navigation li {
+  display: inline-block;  /* Display list items inline */
+  margin-right: 15px;  /* Add space between list items */
+}
+
+.navigation a {
+  text-decoration: none;  /* Remove underline from links */
+  color: black;  /* Black text color for links */
+}
+
+.navigation a:hover {  /* Style for link hover state */
+  color: rgb(0, 157, 255);  /* Change text color to blue on hover */
+}
